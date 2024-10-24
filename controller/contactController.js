@@ -1,9 +1,7 @@
 // controllers/contactController.js
 const axios = require('axios');
 require('dotenv').config(); // Load environment variables from .env
-
-const HUBSPOT_ACCESS_TOKEN = "pat-na1-73918d52-fbff-4181-be7b-f7e05270fd95";
-
+const {HUBSPOT_API_URL, HUBSPOT_ACCESS_TOKEN} = require('../config/hubspot');
 const DEFAULT_PROPERTIES = [
   'firstname',
   'lastname',
