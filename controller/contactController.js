@@ -177,7 +177,6 @@ const searchContacts = async (req, res) => {
     res.status(e.response?.status || 400).json({ message: e.message });
   }
 };
-
 module.exports = {
   createContact,
   getAllContacts,
