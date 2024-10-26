@@ -96,7 +96,6 @@ const createContact = async (req, res) => {
     console.log('Contact created: ', response.data);
     res.status(201).json(response.data);
   } catch (err) {
-    console.log(err);
     res.status(err.response?.status || 500).json({ message: err.message });
   }
 };
@@ -192,7 +191,7 @@ const updateContact = async (req, res) => {
 const deleteContact = async (req, res) => {
   try {
     await axios.delete(
-      `${HUBSPOT_API_URL}/contacts/${req.params.id}`,
+      `${HUBSPOT_API_URL}/contacts/${req.body.id}`,
       {
         headers: {
           Authorization: `Bearer ${HUBSPOT_ACCESS_TOKEN}`,

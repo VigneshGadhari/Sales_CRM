@@ -15,7 +15,7 @@ router.post('/create', createContact);
 router.get('/', getAllContacts); 
 router.get('/getbyid', getContactById); 
 router.patch('/:id', updateContact); 
-router.delete('/:id', deleteContact); 
+router.delete('/deletebyid', deleteContact); 
 router.post('/search', searchContacts); 
 
 module.exports = router;
