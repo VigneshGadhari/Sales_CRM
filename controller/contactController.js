@@ -64,8 +64,8 @@ const createContact = async (req, res) => {
     const priorityLevel = req.body.priority_level;
     const contactData = {
       properties: {
-        firstname: req.body.first_name,
-        lastname: req.body.last_name,
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
         age_group: req.body.age_group,
         gender: req.body.gender,
         phone: req.body.phone_number,
@@ -78,7 +78,7 @@ const createContact = async (req, res) => {
         socio_economic_segment: req.body.socio_economic_segment,
         cultural_affinity: req.body.cultural_affinity,
         language: req.body.language,
-        next_activity_date: req.body.next_activity_date,
+        next_activity_date: "",
         priority_level: priorityLevel,
       },
     };
@@ -146,8 +146,8 @@ const getContactById = async (req, res) => {
 // UPDATE a contact by ID
 const updateContact = async (req, res) => {
   const properties = {
-    firstname: req.body.first_name,
-    lastname: req.body.last_name,
+    firstname: req.body.firstname,
+    lastname: req.body.lastname,
     age_group: req.body.age_group,
     gender: req.body.gender,
     phone: req.body.phone_number,
